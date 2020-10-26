@@ -1,6 +1,17 @@
+$titlefontcolor: #f05454;
+$bodyfontcolor: #af2d2d;
+
+@mixin box-shadow($property) {
+  -webkit-box-shadow: $property;
+  -moz-box-shadow: $property;
+  box-shadow: $property
+  }
+  
+$padding: 16px;    
+
 body {
     font: 100% "Space Mono", monospace;
-    color: #2748b3;
+    color: $bodyfontcolor;
     margin: 0px;
     padding: 0px;
     background-color: #000;
@@ -21,15 +32,6 @@ body {
     background-attachment: fixed;
   }
  
-@mixin box-shadow($property) {
--webkit-box-shadow: $property;
--moz-box-shadow: $property;
-box-shadow: $property
-}
-
-$padding: 16px;
-
-
 article {
     display: flex;
     flex-wrap: wrap;
@@ -80,7 +82,7 @@ article {
   h1,
   h2,
   h6 {
-    color: #6b8eff;
+    color: $titlefontcolor;
   }
   
   h1 {
@@ -98,7 +100,7 @@ article {
     border: 1px solid #ccc;
     padding: $padding;
     margin: 16px;
-    color: #2748b3;
+    color: $bodyfontcolor;
     background-color: #000;
   }
   
