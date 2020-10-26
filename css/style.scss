@@ -94,10 +94,7 @@ article {
     margin-bottom: 0px;
   }
   
-  .message,
-  .success,
-  .error,
-  .warning {
+  .sharedCSS { 
     border: 1px solid #ccc;
     padding: $padding;
     margin: 16px;
@@ -106,13 +103,16 @@ article {
   }
   
   .success {
+    @extend .sharedCSS;
     background-color: green;
   }
   
   .error {
+    @extend .sharedCSS;
     background-color: red;
   }
   
   .warning {
+    @extend .sharedCSS;
     background-color: orange;
   }
