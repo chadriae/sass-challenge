@@ -1,5 +1,24 @@
-$titlefontcolor: #f05454;
-$bodyfontcolor: #af2d2d;
+//variables 
+$padding: 16px;    
+
+//imports
+
+
+//main css
+.button {
+  @extend .sharedCSS;
+  background-color: black; 
+  border: 1px silver solid;
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
 
 @mixin box-shadow($property) {
   -webkit-box-shadow: $property;
@@ -7,7 +26,6 @@ $bodyfontcolor: #af2d2d;
   box-shadow: $property
   }
   
-$padding: 16px;    
 
 body {
     font: 100% "Space Mono", monospace;
@@ -111,7 +129,7 @@ article {
   
   .error {
     @extend .sharedCSS;
-    background-color: red;
+    background-color: $errorcolor;
   }
   
   .warning {
